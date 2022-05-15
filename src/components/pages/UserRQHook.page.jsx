@@ -1,4 +1,5 @@
-import { useGetUsersData } from "../shared/hooks/useGetUsersData";
+import { useGetUsersData } from "../../shared/hooks/useGetUsersData";
+import {Link} from "react-router-dom";
 
 const UsersRQPage = () => {
   function onSuccess() {
@@ -8,8 +9,10 @@ const UsersRQPage = () => {
     console.log("This function will be called when API causes Error");
   }
 
-  const { isLoading, data, isError, error, isFetching } =
-    useGetUsersData(onSuccess, onError);
+  const { isLoading, data, isError, error, isFetching } = useGetUsersData(
+    onSuccess,
+    onError
+  );
   console.log({ isLoading, isFetching });
   if (isLoading) return "Loading...";
   // if (isFetching) return "Updating...";
@@ -18,9 +21,11 @@ const UsersRQPage = () => {
   return (
     <>
       <h2>Welcome to UsersRQPage(Hook)</h2>
-      <ol>
-        {data?.map((userName) => (
-          <li key={userName}>{userName}</li>
+        <ol>
+        {data?.data.map((user) => (
+          <li key={user.id}>
+            <Link to={`/rq-user/${user.id}`}>{user.name}</Link>
+          </li>
         ))}
       </ol>
     </>

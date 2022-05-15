@@ -1,45 +1,37 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import UsersTraditionalPage from "./UsersTraditional.page";
-import UsersRQPage from "./UsersRQ.page";
-import HomePage from "./Home.page";
-import UserRqHookPage from "./UserRQHook.page";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import UsersTraditionalPage from "./pages/UsersTraditional.page";
+import UsersRQPage from "./pages/UsersRQ.page";
+import HomePage from "./pages/Home.page";
+import UserRqHookPage from "./pages/UserRQHook.page";
+import UserRQPage from "./pages/UserRQ.page";
+import Header from "./Header";
+import DynamicParallelQueriesPage from "./pages/DynamicParallelQueries.page";
 
 function Routes() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/users">Traditional User Page</Link>
-            </li>
-            <li>
-              <Link to="/rq-users">RQ User Page</Link>
-            </li>
-            <li>
-              <Link to="/rq-users-hook">RQ User Page (Hook)</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/users">
-            <UsersTraditionalPage />
-          </Route>
-          <Route path="/rq-users">
-            <UsersRQPage />
-          </Route>
-          <Route path="/rq-users-hook">
-            <UserRqHookPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
-      </div>
+      <Header />
+      <Switch>
+        <Route path="/users">
+          <UsersTraditionalPage />
+        </Route>
+        <Route path="/rq-users">
+          <UsersRQPage />
+        </Route>
+        <Route path="/rq-users-hook">
+          <UserRqHookPage />
+        </Route>
+        <Route path="/rq-user/:userId">
+          <UserRQPage />
+        </Route>
+        <Route path="/rq-dynamic-parallel">
+          <DynamicParallelQueriesPage userIds={[1, 3, 5, 7, 10]} />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
     </Router>
   );
 }

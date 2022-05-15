@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getUsers } from "../api/users.api";
+import { getUsers } from "../../api/users.api";
 
 function UsersTraditionalPage() {
   const [isLoading, setIsLoading] = useState(true);
