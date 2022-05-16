@@ -40,5 +40,47 @@
       "id": 10,
       "name": "Some Person 10"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Some Friend 1"
+    },
+    {
+      "id": 2,
+      "name": "Some Friend 2"
+    },
+    {
+      "id": 3,
+      "name": "Some Friend 3"
+    },
+    {
+      "id": 4,
+      "name": "Some Friend 4"
+    },
+    {
+      "id": 5,
+      "name": "Some Friend 5"
+    },
+    {
+      "id": 6,
+      "name": "Some Friend 6"
+    },
+    {
+      "id": 7,
+      "name": "Some Friend 7"
+    },
+    {
+      "id": 8,
+      "name": "Some Friend 8"
+    },
+    {
+      "id": 9,
+      "name": "Some Friend 9"
+    },
+    {
+      "id": 10,
+      "name": "Some Friend 10"
+    }
   ]
 }
