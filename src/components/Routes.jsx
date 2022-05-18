@@ -7,6 +7,7 @@ import UserRqHookPage from "./pages/UserRQHook.page";
 import UserRQPage from "./pages/UserRQ.page";
 import Header from "./Header";
 import DynamicParallelQueriesPage from "./pages/DynamicParallelQueries.page";
+import DependentQueriesPage from "./pages/DependentQueries.page";
 
 function Routes() {
   return (
@@ -26,7 +27,10 @@ function Routes() {
           <UserRQPage />
         </Route>
         <Route path="/rq-dynamic-parallel">
-          <DynamicParallelQueriesPage userIds={[1, 3, 5, 7, 10]} />
+          <DynamicParallelQueriesPage userIds={[1, 3, 2, 4, 5]} />
+        </Route>
+        <Route path="/rq-dependent">
+          <DependentQueriesPage userId={5} />
         </Route>
         <Route path="/">
           <HomePage />

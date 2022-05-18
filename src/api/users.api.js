@@ -13,3 +13,10 @@ export async function getUserByUserId(userId) {
     method: "GET",
   });
 }
+
+export async function getFriendByUserId(userId) {
+  return request({
+    url: `http://localhost:4000/friends/${userId}`,
+    method: "GET",
+  });
+}

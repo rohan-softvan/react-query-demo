@@ -1,6 +1,6 @@
 import React from "react";
-import {useQueries} from "react-query";
-import {getUserByUserId} from "../../api/users.api";
+import { useQueries } from "react-query";
+import { getUserByUserId } from "../../api/users.api";
 
 const fetchUserByUserIdApi = (userId) => {
   return getUserByUserId(userId);
@@ -15,8 +15,17 @@ function DynamicParallelQueriesPage({ userIds }) {
       };
     })
   );
-    console.log("queryResults: ", queryResults);
-  return <div>DynamicParallelQueries</div>;
+  console.log("queryResults: ", queryResults);
+  return (
+    <>
+      <h2>Welcome to DynamicParallelQueriesPage</h2>
+      <ul>
+        {queryResults.map(e=>e.data?.data?.name).map((userName) => (
+            <li key={userName}>{userName}</li>
+        ))}
+      </ul>
+    </>
+  );
 }
 
 export default DynamicParallelQueriesPage;

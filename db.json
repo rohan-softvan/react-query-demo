@@ -2,85 +2,50 @@
   "users": [
     {
       "id": 1,
-      "name": "Some Person 1"
+      "name": "Some Person 1",
+      "friendId": 2
     },
     {
       "id": 2,
-      "name": "Some Person 2"
+      "name": "Some Person 2",
+      "friendId": 1
     },
     {
       "id": 3,
-      "name": "Some Person 3"
+      "name": "Some Person 3",
+      "friendId": 3
     },
     {
       "id": 4,
-      "name": "Some Person 4"
+      "name": "Some Person 4",
+      "friendId": 5
     },
     {
       "id": 5,
-      "name": "Some Person 5"
-    },
-    {
-      "id": 6,
-      "name": "Some Person 6"
-    },
-    {
-      "id": 7,
-      "name": "Some Person 7"
-    },
-    {
-      "id": 8,
-      "name": "Some Person 8"
-    },
-    {
-      "id": 9,
-      "name": "Some Person 9"
-    },
-    {
-      "id": 10,
-      "name": "Some Person 10"
+      "name": "Some Person 5",
+      "friendId": 4
     }
   ],
   "friends": [
     {
       "id": 1,
-      "name": "Some Friend 1"
+      "name": "I am a friend of Some Person 2"
     },
     {
       "id": 2,
-      "name": "Some Friend 2"
+      "name": "I am a friend of Some Person 1"
     },
     {
       "id": 3,
-      "name": "Some Friend 3"
+      "name": "I am a friend of Some Person 3"
     },
     {
       "id": 4,
-      "name": "Some Friend 4"
+      "name": "I am a friend of Some Person 5"
     },
     {
       "id": 5,
-      "name": "Some Friend 5"
-    },
-    {
-      "id": 6,
-      "name": "Some Friend 6"
-    },
-    {
-      "id": 7,
-      "name": "Some Friend 7"
-    },
-    {
-      "id": 8,
-      "name": "Some Friend 8"
-    },
-    {
-      "id": 9,
-      "name": "Some Friend 9"
-    },
-    {
-      "id": 10,
-      "name": "Some Friend 10"
+      "name": "I am a friend of Some Person 4"
     }
   ]
 }

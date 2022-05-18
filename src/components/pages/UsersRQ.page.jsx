@@ -21,8 +21,8 @@ const UsersRQPage = () => {
       //staleTime: 10000, //if api call is within in the specified time it will not call API(default => 0ms)
       // enabled: false // flag for initial api call
       onSuccess, // API onSuccess handler
-      onError, //API onError handler
-      // refetchInterval: 1000 //call API after specified time (default => false)
+      onError, //API onError handler,
+      // refetchInterval: 1000 ,//call API after specified time (default => false)
       // refetchIntervalInBackground: true, //API will call if browser is not in focus
       select: (response) => {
         // return only selected value (we can filter out results too)

@@ -20,6 +20,9 @@ function Header() {
         <li>
           <Link to="/rq-dynamic-parallel">Dynamic Parallel Queries</Link>
         </li>
+        <li>
+          <Link to="/rq-dependent">Dependent Queries</Link>
+        </li>
       </ul>
     </nav>
   );
